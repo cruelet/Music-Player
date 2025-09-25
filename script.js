@@ -9,13 +9,36 @@ const progressContainer = document.getElementById('progress-container');
 const title = document.getElementById('title');
 const cover = document.getElementById('cover');
 
-const songs = ['hey', 'summer', '01 - Key'];
-let songIndex = 2;
+const songs = [ '01 - Key',
+  '02 - Door',
+  '03 - Subwoofer Lullaby',
+  '04 - Death',
+  '05 - Living Mice',
+  '06 - Moog City',
+  '07 - Haggstrom',
+  '08 - Minecraft',
+  '09 - Oxygène',
+  '10 - Équinoxe',
+  '11 - Mice on Venus',
+  '12 - Dry Hands',
+  '13 - Wet Hands',
+  '14 - Clark',
+  '15 - Chris',
+  '16 - Thirteen',
+  '17 - Excuse',
+  '18 - Sweden',
+  '19 - Cat',
+  '20 - Dog',
+  '21 - Danny',
+  '22 - Beginning',
+  '23 - Droopy Likes Ricochet',
+  '24 - Droopy Likes Your Face'];
+let songIndex = 0;
 
 function loadSong(song) {
   title.innerText = song;
   audio.src = `music/${song}.mp3`;
-  cover.src = `images/${song}.jpg`;
+  cover.src = `images/minecraft.jpg`;
 }
 
 loadSong(songs[songIndex]);
