@@ -1,3 +1,4 @@
+// Load a Song Dynamically
 const musicContainer = document.getElementById('music-container');
 const playBtn = document.getElementById('play');
 const prevBtn = document.getElementById('prev');
@@ -43,6 +44,7 @@ function loadSong(song) {
 
 loadSong(songs[songIndex]);
 
+// Add Play and Pause Controls
 function playSong() {
   musicContainer.classList.add('play');
   playBtn.querySelector('i.fas').classList.replace('fa-play', 'fa-pause');
@@ -60,6 +62,7 @@ playBtn.addEventListener('click', () => {
   isPlaying ? pauseSong() : playSong();
 });
 
+// Add Next and Previous Song Logic
 function prevSong() {
   songIndex = (songIndex - 1 + songs.length) % songs.length;
   loadSong(songs[songIndex]);
@@ -75,6 +78,7 @@ function nextSong() {
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
 
+// Update the Progress Bar
 function updateProgress(e) {
   const { duration, currentTime } = e.srcElement;
   const percent = (currentTime / duration) * 100;
@@ -83,6 +87,7 @@ function updateProgress(e) {
 
 audio.addEventListener('timeupdate', updateProgress);
 
+// Click to Seek in Track
 function setProgress(e) {
   const width = this.clientWidth;
   const clickX = e.offsetX;
@@ -91,4 +96,5 @@ function setProgress(e) {
 
 progressContainer.addEventListener('click', setProgress);
 
+// Auto-Play Next Song on End
 audio.addEventListener('ended', nextSong);
