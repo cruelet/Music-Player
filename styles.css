@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.cdnfonts.com/css/minecraft-4'); /* change font */
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  background: linear-gradient(0deg, #f7f7f7 24%, #fcdddd 92%);
-  font-family: 'Lato', sans-serif;
+  background: linear-gradient(0deg, #bed1cc 24%, #529964 92%); /* changed colors */
+  font-family: 'Minecraft', sans-serif; /* change font */
   margin: 0;
   height: 100vh;
   display: flex;
@@ -16,22 +16,26 @@ body {
 }
 
 h1 {
-  margin-bottom: 20px;
+  margin-top: 50px; /* more space between image and text */
+  font-size: 20px; /* changed text size */
+  transform: translateX(-40%); /* put text to the left */
+  color:#776d6f; /* change color of text */
 }
 
 .music-container {
   background: #fff;
   border-radius: 15px;
-  box-shadow: 0 20px 20px rgba(252, 169, 169, 0.6);
+  box-shadow: 0 20px 20px #529964; /*changed shadow color*/
   display: flex;
   align-items: center;
-  padding: 20px 30px;
+  padding: 10px 20px;
   position: relative;
 }
 
 .img-container {
   width: 110px;
   position: relative;
+  transform: translateX(20%); /* push image more inward */
 }
 
 .img-container img {
@@ -42,7 +46,7 @@ h1 {
   position: absolute;
   bottom: 0;
   left: 0;
-  animation: rotate 3s linear infinite;
+  animation: rotate 12s linear infinite; /* made the turning slower*/
   animation-play-state: paused;
 }
 
